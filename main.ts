@@ -1,13 +1,38 @@
 input.onSound(DetectedSound.Loud, function () {
-    basic.showLeds(`
-        # . . . #
-        . # . # .
-        . . # . .
-        . # . # .
-        # . . . #
-        `)
-    music.playMelody("C5 A G C B F D - ", 120)
+	
+})
+input.onSound(DetectedSound.Quiet, function () {
+	
 })
 basic.forever(function () {
-	
+    sound.mapImagesToVolume([
+    images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `),
+    images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `),
+    images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `),
+    images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+    ])
 })
